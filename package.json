@@ -1,5 +1,12 @@
 {
-  "devDependencies": {
-    "vite-plugin-pwa": "^1.0.0"
+  "name": "omikuji-app",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
