@@ -4,10 +4,11 @@ import { ref } from 'vue'//画面に表示するデータが変化したとき�
 import axios from 'axios'//バックエンドサーバと通信するためのライブラリ
 
 const result = ref(null)
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
 const drawOmikuji = async () => {
   try {
-    const res = await axios.get('http://localhost:3000/api/omikuji');
+    const res = await axios.get(`${apiBaseUrl}/api/omikuji`);
     result.value = res.data.result;
   } catch (error) {
     console.error("おみくじの取得に失敗しました:", error);
