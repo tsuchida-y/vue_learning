@@ -4,6 +4,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
+    "build": "cd frontend && npm install && npm run build",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "engines": {
