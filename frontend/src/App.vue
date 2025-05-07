@@ -1,7 +1,7 @@
 <script setup>
-// HelloWorldコンポーネントは使用しないため、インポートを削除しました。
-import { ref } from 'vue'
-import axios from 'axios'
+//javascriptの部分
+import { ref } from 'vue'//画面に表示するデータが変化したときに、画面を再描画するためのもの
+import axios from 'axios'//バックエンドサーバと通信するためのライブラリ
 
 const result = ref(null)
 
@@ -17,6 +17,7 @@ const drawOmikuji = async () => {
 </script>
 
 <template>
+  <!-- HTMLの部分 -->
   <div>
     <h1>おみくじ</h1>
     <button @click="drawOmikuji">引く</button>
@@ -24,7 +25,8 @@ const drawOmikuji = async () => {
   </div>
 </template>
 
-<style scoped>
+<!-- <style scoped>
+/* CSSの部分 */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -37,4 +39,4 @@ const drawOmikuji = async () => {
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
-</style>
+</style> -->
